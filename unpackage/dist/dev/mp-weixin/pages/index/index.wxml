@@ -1,1 +1,1 @@
-<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view></view>
+<view class="box _div data-v-57280228"><ad-item vue-id="8dd740cc-1" class="data-v-57280228" bind:__l="__l"></ad-item><block wx:for="{{wallpaperData}}" wx:for-item="itl" wx:for-index="index" wx:key="index"><img-item vue-id="{{'8dd740cc-2-'+index}}" num="{{index}}" list="{{itl}}" class="data-v-57280228" bind:__l="__l"></img-item></block></view>

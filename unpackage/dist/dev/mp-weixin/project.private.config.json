@@ -3,5 +3,18 @@
   "projectname": "tumeng-uni-app",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "tumeng-detail",
+          "pathName": "pages/detail/index",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

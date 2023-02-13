@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/forum/index",
+    "pages/moment/index",
+    "pages/snapshot/index",
+    "pages/detail/index"
   ],
   "subPackages": [],
   "window": {
@@ -8,6 +12,39 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "每日壁纸",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/album.png",
+        "selectedIconPath": "static/tabs/album-active.png"
+      },
+      {
+        "text": "朋友圈",
+        "pagePath": "pages/moment/index",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "text": "美图",
+        "pagePath": "pages/forum/index",
+        "iconPath": "static/tabs/forum.png",
+        "selectedIconPath": "static/tabs/forum-active.png"
+      },
+      {
+        "text": "表情包",
+        "pagePath": "pages/snapshot/index",
+        "iconPath": "static/tabs/orders.png",
+        "selectedIconPath": "static/tabs/orders-active.png"
+      }
+    ],
+    "position": "bottom"
   },
   "permission": {},
   "usingComponents": {}

@@ -1,0 +1,1 @@
+<view class="box _div data-v-43af6908"><block wx:for="{{wallpaperData}}" wx:for-item="itl" wx:for-index="index" wx:key="index"><img-item vue-id="{{'323cb5ec-1-'+index}}" num="{{index}}" list="{{itl}}" class="data-v-43af6908" bind:__l="__l"></img-item></block></view>

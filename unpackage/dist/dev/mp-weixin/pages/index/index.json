@@ -1,4 +1,7 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {}
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "img-item": "/components/mainItem",
+    "ad-item": "/components/mainAdItem"
+  }
 }
