@@ -2,17 +2,17 @@
   <div class="detail-box">
     <div class="item" >
       <div class="title">
-				{{detail.title || ''}}
+				{{handleDetail.title || ''}}
       </div>
       <div class="content">
 				<div class="txt">
-					{{detail.content || ''}}
+					{{handleDetail.content || ''}}
 				</div>
-        <div class="images-box" v-if="detail && detail.images">
-          <img class="img-item" v-for="(img, index) in detail.images" :key="index" mode="aspectFit" lazy-load="true" :src="fetchImgUrl(img)" />
+        <div class="images-box" v-if="handleDetail && handleDetail.images">
+          <img class="img-item" v-for="(img, index) in handleDetail.images" :key="index" mode="aspectFit" lazy-load="true" :src="fetchImgUrl(img)" />
         </div>
 				<div class="attachment" v-if="showAttachment">
-					{{detail.attachment}}
+					<text selectable="true" user-select>{{handleDetail.attachment}}</text>
 				</div>
 				<div v-else class="ad-box">
 					<div class="ad-tips">
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import {baseUrl} from '@/utils/index.js'
+const baseUrl = 'https://jihulab.com/blank1895/emoji-wallpapers/-/raw/master/'
 export default {
   data () {
     return {
@@ -54,11 +54,13 @@ export default {
 	},
   components: {},
   created () {},
-	onLoad() {
+	onLoad(option) {
 		const page = getCurrentPages()[0]
 		const {options, route} = page
-		this.id = options.id
-		
+		console.log('=====, option', option)
+		console.log('=====, page', page, options.id)
+		this.id = option.id
+		this.fetchDetails(option.id)
 		// 激励广告
 		if(wx.createRewardedVideoAd){
 			this.rewardedVideoAd = wx.createRewardedVideoAd({ adUnitId: 'adunit-6ad070fced0eea91' })
@@ -77,7 +79,7 @@ export default {
 		}
 	},
   mounted () {
-    this.fetchDetails(this.id)
+    // this.fetchDetails(this.id)
     wx.showShareMenu({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
@@ -85,10 +87,11 @@ export default {
   },
   methods: {
     fetchDetails (id) {
+			console.log('=====id', this.id)
 			wx.showLoading({ title: '加载中...', mask: true })
       let _this = this
       wx.request({
-        url: `${baseUrl}/lists.json?v=${new Date().getTime()}`,
+        url: 'https://jihulab.com/blank1895/emoji-wallpapers/-/raw/master/lists.json?v=' + new Date().getTime(),
         data: {},
         method: 'GET',
         header: {

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "美图帖",
-  "usingComponents": {}
+  "usingComponents": {
+    "ad-item": "/components/mainAdItem"
+  }
 }

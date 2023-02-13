@@ -143,12 +143,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var ImgItem = function ImgItem() {
   __webpack_require__.e(/*! require.ensure | components/mainItem */ "components/mainItem").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mainItem.vue */ 74));
+    return resolve(__webpack_require__(/*! @/components/mainItem.vue */ 73));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var AdItem = function AdItem() {
   __webpack_require__.e(/*! require.ensure | components/mainAdItem */ "components/mainAdItem").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mainAdItem.vue */ 88));
+    return resolve(__webpack_require__(/*! @/components/mainAdItem.vue */ 80));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

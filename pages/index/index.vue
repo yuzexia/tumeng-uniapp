@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-		<AdItem></AdItem>
+		<AdItem unitId="adunit-9febccf65acb2006"></AdItem>
     <ImgItem v-for="(itl, index) in wallpaperData" :key="index" :num="index" :list="itl"></ImgItem>
   </div>
 </template>

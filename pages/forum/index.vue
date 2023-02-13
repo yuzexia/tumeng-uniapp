@@ -1,6 +1,7 @@
 <template>
   <div class="forum">
-    <navigator class="list-item" v-for="(item, index) in postData" :key="index" :url="`/pages/detail/index?id=${index}`">
+		<AdItem unitId="adunit-b819125dace4643b"></AdItem>
+    <navigator class="list-item" v-for="(item, index) in postData" :key="index" :url="`/pages/detail/index?id=${index + 1}`">
       <div class="title">
         {{item.title}}
       </div>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import AdItem from '@/components/mainAdItem.vue'
 const baseUrl = 'https://jihulab.com/blank1895/emoji-wallpapers/-/raw/master/'
 
 export default {
@@ -23,6 +25,9 @@ export default {
       postLists: []
     }
   },
+	components: {
+		AdItem
+	},
   computed: {
     postData () {
       return this.postLists && this.postLists.map(item => ({
@@ -36,6 +41,9 @@ export default {
     // this.$cookie.set('test', 'hello world', 1)
     // console.log(Vue)
   },
+	onLoad(){
+		
+	},
   mounted () {
     this.getPostsList()
     wx.showShareMenu({
@@ -47,7 +55,7 @@ export default {
     getPostsList () {
       let _this = this
       wx.request({
-        url: `${baseUrl}/lists.json?v=${new Date().getTime()}`,
+        url: 'https://jihulab.com/blank1895/emoji-wallpapers/-/raw/master/lists.json?v=' + new Date().getTime(),
         data: {},
         method: 'GET',
         header: {

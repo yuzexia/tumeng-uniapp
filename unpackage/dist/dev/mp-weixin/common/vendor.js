@@ -9561,60 +9561,6 @@ function normalizeComponent (
 }
 
 
-/***/ }),
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
-/*!***********************************************************!*\
-  !*** D:/collect/enterprise/tumeng-uni-app/utils/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.baseUrl = void 0;
-exports.formatTime = formatTime;
-function formatNumber(n) {
-  var str = n.toString();
-  return str[1] ? str : "0".concat(str);
-}
-function formatTime(date) {
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
-  var t1 = [year, month, day].map(formatNumber).join('/');
-  var t2 = [hour, minute, second].map(formatNumber).join(':');
-  return "".concat(t1, " ").concat(t2);
-}
-var baseUrl = 'https://jihulab.com/blank1895/emoji-wallpapers/-/raw/master/';
-exports.baseUrl = baseUrl;
-var _default = {
-  formatNumber: formatNumber,
-  formatTime: formatTime,
-  baseUrl: baseUrl
-};
-exports.default = _default;
-
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
